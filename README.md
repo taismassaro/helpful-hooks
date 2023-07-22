@@ -39,3 +39,21 @@ function App() {
   );
 }
 ```
+
+## useIsOnScreen
+
+Returns a boolean that indicates whether the provided element has entered or left the viewport.
+
+```tsx
+function App() {
+  const wrapperRef = useRef();
+  const isOnscreen = useIsOnscreen(wrapperRef);
+
+  return (
+    <>
+      <p>Is visible: {isOnscreen ? "YES" : "NO"}</p>
+      <div ref={wrapperRef} />
+    </>
+  );
+}
+```
